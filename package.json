@@ -1,0 +1,24 @@
+{
+  "name": "star-wars-vr",
+  "version": "1.0.0",
+  "description": "Assets used\r Skyboxes\r https://hdrihaven.com/hdri/?h=satara_night\r https://sci.esa.int/web/gaia/-/60196-gaia-s-sky-in-colour-equirectangular-projection\r https://www.inverse.com/science/5-beautiful-space-photos/amp",
+  "main": "index.js",
+  "dependencies": {
+    "aframe-watcher": "^1.4.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaidenMT/star-wars-vr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaidenMT/star-wars-vr/issues"
+  },
+  "homepage": "https://github.com/RaidenMT/star-wars-vr#readme"
+}

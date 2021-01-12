@@ -2,6 +2,10 @@
 
 Assets used
 Skyboxes
+https://wwwtyro.github.io/space-3d/#animationSpeed=1&fov=115.61445802891281&nebulae=true&pointStars=true&resolution=1024&seed=11stb5xjfktc&stars=true&sun=false
+https://wwwtyro.github.io/space-3d/#animationSpeed=1&fov=43.291513943896426&nebulae=false&pointStars=true&resolution=1024&seed=67sxwapv7ao0&stars=true&sun=false
+https://360toolkit.co/convert-cubemap-to-spherical-equirectangular
+
 https://hdrihaven.com/hdri/?h=satara_night
 https://sci.esa.int/web/gaia/-/60196-gaia-s-sky-in-colour-equirectangular-projection
 https://www.inverse.com/science/5-beautiful-space-photos/amp
