@@ -12,14 +12,17 @@
 
 <body>
 
-    <a-scene>
-        <a-assets>
+    <a-scene inspector>
+        <a-assets timeout="5000">
             <img id="sky" src="./assets/images/skyboxes/skybox-galaxy-2.jpg"
                 alt="HDRI de https://hdrihaven.com/hdri/?h=satara_night">
 
             <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf"></a-asset-item>
             <a-asset-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf"></a-asset-item>
             <a-asset-item id="hangar" src="./assets/models/hangar/scene.gltf"></a-asset-item>
+
+            <!-- https://aframe.io/docs/1.1.0/core/asset-management-system.html#preloading-audio-and-video -->
+            <audio src="./assets/audio/Star_Wars_original_opening_crawl_1977.mp3" preload="auto"></audio>
         </a-assets>
 
         <!-- https://www.youtube.com/watch?v=Nfsx9V8tIYE -->
