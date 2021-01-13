@@ -17,6 +17,11 @@ Videos
 https://www.youtube.com/watch?v=UYE834sgtSs
 https://www.youtube.com/watch?v=R_043xbsqVE
 
+https://www.youtube.com/watch?v=6zt7IYtEPyc
+https://www.youtube.com/watch?v=cY6nP0jfdd8
+https://www.youtube.com/watch?v=5_36MuSFM3o
+https://www.youtube.com/watch?v=C587lNBQXAw
+
 https://starwarsintrocreator.kassellabs.io/
 https://play.starwars.com/html5/starwars_crawlcreator/
 

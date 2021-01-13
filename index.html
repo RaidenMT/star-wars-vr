@@ -19,7 +19,7 @@
         <a-assets timeout="5000">
             <img id="sky" src="./assets/images/skyboxes/skybox-galaxy-2.jpg"
                 alt="HDRI de https://hdrihaven.com/hdri/?h=satara_night">
-            <img id="sky2" src="./assets/images/skyboxes/skybox-galaxy.png">
+            <img id="hangarskybox" src="./assets/images/skyboxes/hangar.png">
 
             <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf"></a-asset-item>
             <a-asset-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf"></a-asset-item>
@@ -108,33 +108,40 @@
             ></a-image>
         </a-entity>
 
-        <a-link href="./deathstar.html" title="Death Star" backgroundColor="black" borderColor="black" position="0 1.6 0" scale="0 0 0"
+        <a-link href="./deathstar.html" title="Death Star" backgroundColor="#000000" image="#hangarskybox" borderColor="#000000" position="0 1.6 0" scale="0 0 0"
             animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 85001;"></a-link>
 
         <a-entity 
-            camera="active: true"
+            camera
+            wasd-controls="enabled: false;"
             look-controls 
             position="0 1.6 3"
-            animation="property: camera.active; to: false; delay: 90000;"
+            visible="true"
+            laser-controls
+            raycaster="far: 30; interval: 1000; objects: .clickable"
+            animation="property: wasd-controls.enabled; to: true; delay: 87000;"
         ></a-entity>
 
-        <a-entity 
+        <!-- <a-entity 
             camera="active: false;"    
             look-controls 
-            position="0 1.8 2"
+            position="0 1.6 3"
             wasd-controls 
-            animation="property: camera.active; to: true; delay: 90000;">
-            
-            <!-- <a-entity 
-                cursor="fuse: true; fuseTimeout: 500" 
+            visible="false"
+            animation="property: camera.active; to: true; delay: 87000;"
+            animation__show="property: visible; to: true; delay: 87000;"
+            >
+            <a-entity
+                laser-controls
+                cursor="fuse: true; fuseTimeout: 1500;"
                 position="0 0 -1"
-                geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015" 
+                geometry="primitive: ring; radiusInner: 0.1; radiusOuter: 0.15" 
                 material="color: white; shader: flat"
                 visible="false"
                 animation="property: visible; to: true; delay: 90000;">
-            </a-entity> -->
-            <!-- <a-cursor></a-cursor> -->
-        </a-entity>
+            </a-entity>
+            
+        </a-entity> -->
 
     </a-scene>
 
