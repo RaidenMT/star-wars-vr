@@ -20,6 +20,8 @@ https://starwarsintrocreator.kassellabs.io/
 
 https://online-video-cutter.com/es/
 
+https://easings.net/
+
 
 3D
 Stormtrooper

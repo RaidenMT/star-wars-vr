@@ -12,10 +12,8 @@
 
 <body>
 
-    <a-scene 
-        inspector
-        gltf-model="dracoDecoderPath: ./assets/draco/;"
-        >
+    <a-scene loading-screen="dotsColor: red; backgroundColor: white" inspector
+        gltf-model="dracoDecoderPath: ./assets/draco/;">
         <a-assets timeout="5000">
             <img id="sky" src="./assets/images/skyboxes/skybox-galaxy-2.jpg"
                 alt="HDRI de https://hdrihaven.com/hdri/?h=satara_night">
@@ -25,7 +23,7 @@
             <a-asset-item id="hangar" src="./assets/models/hangar/scene.gltf"></a-asset-item>
 
             <!-- https://aframe.io/docs/1.1.0/core/asset-management-system.html#preloading-audio-and-video -->
-            <audio src="./assets/audio/Star_Wars_original_opening_crawl_1977.mp3" preload="auto"></audio>
+            <audio id="song" src="./assets/audio/Star_Wars_original_opening_crawl_1977.mp3" preload="auto"></audio>
             <img id="stars" src="./assets/images/skyboxes/cubemap.png" alt="Cubemap from wwwtyro.net" preload>
             <img id="logo" src="./assets/images/svgs/logo.svg" alt="Logo of Star Wars" preload>
             <img id="deathstar" src="./assets/images/deathstar.png" alt="Deathstar" preload>
@@ -34,40 +32,56 @@
         <!-- https://www.youtube.com/watch?v=Nfsx9V8tIYE -->
         <a-sky src="#stars"></a-sky>
 
-        <!-- <a-entity 
+        <a-sound src="#song" autoplay="true"></a-sound>
+
+        <a-entity 
             text="value: A long time ago, in a galaxy far,\n far away...;
                     color: #4bd5ee;
                     width: 3;
                     align: left;
                     xOffset: 0.5;" 
             position="0 1.6 2"
+            animation="property: text.color; from: rgba(0, 0, 0, 0); to: #4bd5ee; round: true; dir: alternate; loop: 2; dur: 4000; easing: easeOutCirc"
+            animation__hide="property: visible; to: false; delay: 9100; round: true;"
         ></a-entity>
 
         <a-image 
             src="#logo"
             scale="6 3.5 4"
-            position="0 1.6 1"
-        ></a-image> -->
+            position="0 1.6 3"
+            color="#FFF933"
+            visible="false"
+            animation="property: position; to: 0 1.6 -100; dur: 80000; easing: easeOutQuint; delay: 10000;"
+            animation__show="property: visible; to: true; delay: 8500;"
+            animation__disappear="property: color; from: #FFF933; to: rgba(0,0,0,0); easing: easeOutSine; round: true; delay: 19500;"
+        ></a-image>
 
-        <a-entity
-            text="value: Episode VII;
+        <a-entity 
+            rotation="-60 0 0"
+            position="0 1 2.5"
+            visible="false"
+            animation="property: position; to: 0 5.6 -10; dur: 70000; delay: 14000;"
+            animation__show="property: visible; to: true; delay: 14000;"
+            animation__disappear="property: color; from: #FFF933; to: rgba(0,0,0,0); easing: easeOutSine; round: true; delay: 80500;"
+            >
+            <a-entity text="value: Episode VII;
                     color: #ffca48;
                     width: 2;
                     align: center;
-                    xOffset: -0.5;" 
-            position="0.5 2.1 2"
-            rotation="-45 0 0"
-        ></a-entity>
+                    baseline: top;"
+                position="0 0 0"></a-entity>
 
-        <a-entity
-            text="anchor:  align;  width:  2;  value:  THE FORCE AWAKENS;  color:  #ffca48;  xOffset:  -0.5;  zOffset:  0"
-            position="0 2.0 2"
-            scale="1 1.3 1"
-            rotation="-45 0 0"
-        ></a-entity>
-            
-        <a-entity
-            text="value: Luke Skywalker has vanished. In his absence, the sinister FIRST ORDER has risen from the ashes of the Empire and will not rest until Skywalker, the last Jedi, has been destroyed.
+            <a-entity text="anchor: align; 
+                width: 3;
+                value: THE FORCE AWAKENS; 
+                color: #ffca48; 
+                xOffset: -0.66; 
+                zOffset:  0; 
+                baseline: top;" 
+                position="0 -0.2 0"
+                scale="1 1.3 1"></a-entity>
+
+            <a-entity text="value: Luke Skywalker has vanished. In his absence, the sinister FIRST ORDER has risen from the ashes of the Empire and will not rest until Skywalker, the last Jedi, has been destroyed.
 
             With the support of the REPUBLIC, General Leia Organa leads a brave RESISTANCE. She is desperate to find her brother Luke and gain his help in restoring peace and justice to the galaxy.
             
@@ -75,16 +89,12 @@
                     color: #ffca48;
                     width: 2;
                     align: left;
-                    xOffset: 0.5;" 
-            position="-0.5 1.6 2"
-            rotation="-45 0 0"
-        ></a-entity>
+                    baseline: top;
+                    lineHeight: 60;"
+                position="0 -0.6 0"></a-entity>
+        </a-entity>
 
-        <a-image 
-            src="#deathstar"
-            position="0 1.6 5"
-            rotation="0 180 0"
-        ></a-image>
+        <a-image src="#deathstar" position="0 1.6 5" rotation="0 180 0"></a-image>
 
         <!-- <a-entity 
             gltf-model="#mandalorian"
