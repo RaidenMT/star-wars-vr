@@ -18,6 +18,8 @@ https://www.youtube.com/watch?v=UYE834sgtSs
 https://www.youtube.com/watch?v=R_043xbsqVE
 https://starwarsintrocreator.kassellabs.io/
 
+https://online-video-cutter.com/es/
+
 
 3D
 Stormtrooper
