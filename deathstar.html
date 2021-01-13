@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Star</title>
+    
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+
+
+    <a-scene loading-screen="dotsColor: #ffca48; backgroundColor: black" inspector stats
+        gltf-model="dracoDecoderPath: ./assets/draco/;">
+        <a-assets timeout="5000">
+            <img id="sky" src="./assets/images/skyboxes/skybox-galaxy-2.jpg"
+                alt="HDRI de https://hdrihaven.com/hdri/?h=satara_night">
+            <img id="sky2" src="./assets/images/skyboxes/skybox-galaxy.png">
+
+            <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf"></a-asset-item>
+            <a-asset-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf"></a-asset-item>
+            <a-asset-item id="hangar" src="./assets/models/hangar/scene.gltf"></a-asset-item>
+
+        </a-assets>
+
+        <!-- https://www.youtube.com/watch?v=Nfsx9V8tIYE -->
+        <!-- <a-sky src="#stars"></a-sky> -->
+
+        <!-- <a-sound src="#song" autoplay="true"></a-sound> -->
+
+
+    <!-- <a-entity 
+            gltf-model="#mandalorian"
+            scale="1.5 1.5 1.5"
+            animation-mixer
+            position="0 0 0"
+        ></a-entity> -->
+
+
+        <a-entity 
+            gltf-model="#stormtrooper"
+            scale="0.01 0.01 0.01"
+            animation-mixer
+            position="-1 0 0"
+        ></a-entity>
+
+        <a-entity 
+            gltf-model="#stormtrooper"
+            scale="0.01 0.01 0.01"
+            animation-mixer
+            position="1 0 0"
+        ></a-entity>
+
+        <a-entity 
+            gltf-model="#stormtrooper"
+            scale="0.01 0.01 0.01"
+            animation-mixer
+            position="-1 0 -1"
+        ></a-entity>
+
+        <a-entity 
+            gltf-model="#stormtrooper"
+            scale="0.01 0.01 0.01"
+            animation-mixer
+            position="1 0 -1"
+        ></a-entity>
+
+        <a-entity 
+            gltf-model="#hangar"
+        ></a-entity>
+
+        <!-- <a-entity 
+            camera="active: true"
+            look-controls 
+            position="0 1.6 3"
+            animation="property: camera.active; to: false; delay: 90000;"
+        ></a-entity> -->
+
+
+        <!-- animation="property: rotation; to: 0 180 0; dur: 80000;" -->
+        <a-entity animation="property: rotation; to: 0 180 0; dur: 5000;">
+            <!-- <a-image 
+            src="#deathstar" 
+            position="0 1.6 10" 
+            rotation="0 180 0"
+            animation="property: position; to: 0 1.6 -1; dur: 5000;"
+        ></a-image> -->
+        </a-entity>
+        <!-- animation="property: position; to: 0 1.6 -1; dur: 11000; delay: 80000;" -->
+
+        <!-- <a-link href="./index.html" title="Death Star" image="#sky2" position="0 1.6 0"></a-link> -->
+
+        <a-entity look-controls position="0 1.6 3" camera="active: false;" wasd-controls
+            animation="property: camera.active; to: true;">
+            <!-- animation="property: camera.active; to: true; delay: 90000;" -->
+            <a-cursor></a-cursor>
+        </a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>

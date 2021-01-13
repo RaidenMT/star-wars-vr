@@ -16,7 +16,9 @@ https://www.inverse.com/science/5-beautiful-space-photos/amp
 Videos
 https://www.youtube.com/watch?v=UYE834sgtSs
 https://www.youtube.com/watch?v=R_043xbsqVE
+
 https://starwarsintrocreator.kassellabs.io/
+https://play.starwars.com/html5/starwars_crawlcreator/
 
 https://online-video-cutter.com/es/
 
