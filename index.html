@@ -19,9 +19,6 @@
         <a-assets timeout="5000">
             <img id="sky" src="./assets/images/skyboxes/skybox-galaxy-2.jpg"
                 alt="HDRI de https://hdrihaven.com/hdri/?h=satara_night">
-            
-            <img id="stars" src="./assets/images/skyboxes/cubemap.png" alt="Cubemap from wwwtyro.net" preload>
-            <img id="logo" src="./assets/images/svgs/logo.svg" alt="Logo of Star Wars" preload>
 
             <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf"></a-asset-item>
             <a-asset-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf"></a-asset-item>
@@ -29,6 +26,8 @@
 
             <!-- https://aframe.io/docs/1.1.0/core/asset-management-system.html#preloading-audio-and-video -->
             <audio src="./assets/audio/Star_Wars_original_opening_crawl_1977.mp3" preload="auto"></audio>
+            <img id="stars" src="./assets/images/skyboxes/cubemap.png" alt="Cubemap from wwwtyro.net" preload>
+            <img id="logo" src="./assets/images/svgs/logo.svg" alt="Logo of Star Wars" preload>
         </a-assets>
 
         <!-- https://www.youtube.com/watch?v=Nfsx9V8tIYE -->
@@ -42,7 +41,11 @@
                     xOffset: 0.5;" 
             position="0 1.6 2"></a-entity>
 
-        
+        <a-image 
+            src="#logo"
+            scale="6 3.5 4"
+            position="0 1.6 1"
+        ></a-image>
 
         <!-- <a-entity 
             gltf-model="#mandalorian"
