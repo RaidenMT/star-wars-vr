@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Death Star</title>
+    <title>Roy's birthday - Death Star</title>
     
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
@@ -16,20 +16,21 @@
 <body>
 
 
-    <a-scene loading-screen="dotsColor: #ffca48; backgroundColor: black" inspector stats
+    <a-scene loading-screen="dotsColor: #ffca48; backgroundColor: black" inspector
         gltf-model="dracoDecoderPath: ./assets/draco/;">
         <a-assets timeout="5000">
+            <img id="hangarskybox" src="./assets/images/skyboxes/hangar.png" preload>
+
             <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf" preload></a-asset-item>
-            <a-asset-item id="hangar" src="./assets/models/hangar/scene.gltf" preload></a-asset-item>
+            <!-- <a-asset-item id="hangar" src="./assets/models/hangar/scene.gltf" preload></a-asset-item> -->
 
             <video id="darthvader" loop="false" src="./assets/videos/darth vader happry birthday.mp4" preload></video>
 
-            <a-mixin id="dance" animation-mixer="timeScale: 0;" animation="property: animation-mixer.timeScale; to: 1; delay: 3000;"></a-mixin>
+            <a-mixin id="dance" animation-mixer="timeScale: 0;" animation="property: animation-mixer.timeScale; to: 1; delay: 20000;"></a-mixin>
             <a-mixin id="scale" scale="0.01 0.01 0.01"></a-mixin>
         </a-assets>
-
-        <!-- <a-sound src="#song" autoplay="true"></a-sound> -->
         
+        <a-sky src="#hangarskybox"></a-sky>
 
         <a-video 
             id="videoDarthVader"
@@ -38,24 +39,20 @@
             height="9"
             position="0 10 -15"
             video
-            delay=""
             ></a-video>
-
 
         <a-entity 
             class="stormtrooper"
             gltf-model="#stormtrooper"
             position="-2 0 0"
-            mixin="scale "
-            
+            mixin="scale dance"
         ></a-entity>
 
         <a-entity 
         class="stormtrooper"
             gltf-model="#stormtrooper"
             position="-1 0 0"
-            mixin="scale "
-            
+            mixin="scale dance"
         ></a-entity>
 
         <a-entity 
@@ -63,7 +60,6 @@
             gltf-model="#stormtrooper"
             position="1 0 0"
             mixin="scale dance"
-            
         ></a-entity>
 
         <a-entity 
@@ -71,7 +67,6 @@
             gltf-model="#stormtrooper"
             position="2 0 0"
             mixin="scale dance"
-            
         ></a-entity>
 
         <a-entity 
@@ -79,7 +74,6 @@
             gltf-model="#stormtrooper"
             position="-2 0 -1"
             mixin="scale dance"
-            
         ></a-entity>
 
         <a-entity 
@@ -87,7 +81,6 @@
             gltf-model="#stormtrooper"
             position="-1 0 -1"
             mixin="scale dance"
-            
         ></a-entity>
 
         <a-entity 
@@ -95,7 +88,6 @@
             gltf-model="#stormtrooper"
             position="1 0 -1"
             mixin="scale dance"
-            
         ></a-entity>
 
         <a-entity 
@@ -103,12 +95,8 @@
             gltf-model="#stormtrooper"
             position="2 0 -1"
             mixin="scale dance"
-            
         ></a-entity>
 
-        <a-entity 
-            gltf-model="#hangar"
-        ></a-entity>
 
         <!-- <a-link href="./index.html" title="Death Star" image="#sky2" position="0 1.6 0"></a-link> -->
 
@@ -128,7 +116,7 @@
     </a-scene>
 
     <script src="./assets/js/deathstar.js"></script>
-    
+
 </body>
 
 </html>
