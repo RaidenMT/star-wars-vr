@@ -16,8 +16,11 @@
 
         <a-assets timeout="5000">
             <img id="sky" src="./assets/images/skyboxes/cubemap2.png" alt="" preload>
+            <img id="final" src="./assets/images/skyboxes/final.png" alt="" preload>
             <video id="video" src="./assets/videos/grogu happy birthday.mp4" preload autoplay></video>
 
+            <a-asset-item id="razorcrest" src="./assets/models/ships/razor-crest/scene.gltf" preload></a-asset-item>
+            <!-- <a-asset-item id="tatooine" src="./assets/models/tatooine/tatooine.glb" preload></a-asset-item> -->
             <a-assets-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf" preload></a-assets-item>
             <a-assets-item id="grogu" src="./assets/models/grogu/scene.gltf" preload></a-assets-item>
         </a-assets>
@@ -28,6 +31,10 @@
             height="9"
             position="0 6 -12">
         </a-video>
+
+        <!-- <a-entity
+            gltf-model="#tatooine"
+            ></a-entity> -->
 
         <a-entity
             gltf-model="#mandalorian"
@@ -43,14 +50,24 @@
             rotation="0 45 0"></a-entity>
 
         <a-link href="./final.html" 
-            title="Happy Birthday Roy!" image="#hangarskybox" position="0 1.6 -3" class="clickable"
+            title="Happy Birthday Roy!" image="#final" class="clickable"
             link="borderColor: #ffca48; backgroundColor: #000000; titleColor: #ffca48; titleColor: #ffca48; peekMode: on;" side="double"
-            
+            position="0 0 500"
+            scale="0 0 0"
+            animation__scale="property: scale; to: 1 1 1: dur: 2000; delay: 29000;"
+            animation__show="property: position; to: 0 1.6 0; delay: 28000;"
             ></a-link>
-            <!-- scale="0 0 0" -->
-            <!-- animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 5000;" -->
+            
+        
+        <a-entity
+            gltf-model="#razorcrest"
+            position="30 -10 40"
+            rotation="0 120 0"
+            scale="0.02 0.02 0.02"
+            ></a-entity>
 
-        <a-sky src="#sky" ></a-sky>
+
+        <a-sky src="#sky" ></a-sky>        
 
         <a-entity
             light="intensity: 6;"
@@ -68,7 +85,7 @@
             camera
             look-controls
             position="0 1.6 3">
-            <a-entity cursor raycaster="far: 50; interval: 1000; objects: .clickable"></a-entity>
+            <a-entity cursor raycaster="far: 80; interval: 1000; objects: .clickable"></a-entity>
         </a-entity>
 
     </a-scene>

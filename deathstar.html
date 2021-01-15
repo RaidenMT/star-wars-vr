@@ -10,7 +10,7 @@
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
-    <script src="./assets/js/deathstar-components.js"></script>
+    <!-- <script src="./assets/js/deathstar-components.js"></script> -->
 </head>
 
 <body>
@@ -20,8 +20,11 @@
         gltf-model="dracoDecoderPath: ./assets/draco/;">
         <a-assets timeout="5000">
             <img id="hangarskybox" src="./assets/images/skyboxes/hangar.png" preload>
+            <img id="mandalorian" src="./assets/images/skyboxes/mandalorian.png">
 
             <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf" preload></a-asset-item>
+            <a-asset-item id="razorcrest" src="./assets/models/ships/razor-crest/scene.gltf"></a-asset-item>
+            <a-asset-item id="ship" src="./assets/models/ships/star_wars_tie_fighter/scene.gltf"></a-asset-item>
 
             <video id="darthvader" loop="false" src="./assets/videos/darth vader happry birthday.mp4" preload></video>
 
@@ -95,19 +98,41 @@
             position="2 0 -1"
             mixin="scale dance"
         ></a-entity>
+        
+        <a-entity
+            gltf-model="#ship"
+            position="-20 0 -50"
+            animation="property: position; to: -40 7 100; dur: 12000; easing: easeOutSine; delay: 40000;"
+            animation__hide="property: visible; to: false; delay: 52000;"
+        ></a-entity>
+        <a-entity
+            gltf-model="#ship"
+            position="23 0 -55"
+            animation="property: position; to: 38 5 99; dur: 11500; easing: easeOutSine; delay: 40000;"
+            animation__hide="property: visible; to: false; delay: 52000;"
+        ></a-entity>
+
+        <a-entity
+            gltf-model="#razorcrest"
+            scale="0 0 0"
+            position="30 -20 60"
+            rotation="0 120 0"
+            animation__scale="property: scale; to: 0.02 0.02 0.02: dur: 2000; delay: 45000;"
+            ></a-entity>
 
         <a-link href="./mandalorian.html" 
-            title="Mandalorian" image="#hangarskybox" position="0 1.6 8"  class="clickable"
+            title="The Mandalorian" image="#mandalorian" position="0 1.6 6"  class="clickable"
             link="borderColor: #ffca48; backgroundColor: #000000; titleColor: #ffca48; titleColor: #ffca48;" side="double"
-            
+            scale="0 0 0"
+            animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 45000;"
             ></a-link>
-            <!-- scale="0 0 0" -->
-            <!-- animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 5000;" -->
+        
+        <a-entity light="type: ambient; intensity: 2;"></a-entity>
         <a-entity 
             camera
-            look-controls 
+            look-controls
             position="0 1.6 3">
-            <a-entity cursor raycaster="far: 50; interval: 1000; objects: .clickable"></a-entity>
+            <a-entity cursor raycaster="far: 80; interval: 1000; objects: .clickable"></a-entity>
         </a-entity>
 
     </a-scene>

@@ -52,6 +52,15 @@ https://sketchfab.com/3d-models/darth-vader-jedi-fallen-order-2cd28d328dc64fbc86
 Grogu
 https://sketchfab.com/3d-models/baby-yoda-f7cb443df7e348c38aca60eec4fe9509
 
+Tatooine
+https://sketchfab.com/3d-models/star-wars-binary-sunset-over-tatooine-desert-6543e8e057ea4a85ba3586ce00e42b98
+
+Ships
+https://sketchfab.com/3d-models/star-wars-tie-advanced-0b3825de4fa542a893c9f9344b7e5f31
+https://sketchfab.com/3d-models/star-wars-tie-interceptor-80171ec2930b4949836bcf24d9694c41
+https://sketchfab.com/3d-models/star-wars-tie-defender-22bc65f9eb4640b6ae58b1b5e184e80e
+https://sketchfab.com/3d-models/star-wars-tie-fighter-79d9403f15334c129ea5454daffe6b5c
+https://sketchfab.com/3d-models/the-mandalorian-razor-crest-full-interior-ee72226c953c414ca0b7ab5780fe400a
 
 Fonts
 https://msdf-bmfont.donmccurdy.com/

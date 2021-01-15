@@ -19,23 +19,50 @@
         <a-assets timeout="5000">
             <img id="sky" src="./assets/images/skyboxes/skybox-galaxy-2.jpg"
                 alt="HDRI de https://hdrihaven.com/hdri/?h=satara_night">
-            <img id="hangarskybox" src="./assets/images/skyboxes/hangar.png">
-
-            <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf"></a-asset-item>
-            <a-asset-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf"></a-asset-item>
-            <a-asset-item id="hangar" src="./assets/models/hangar/scene.gltf"></a-asset-item>
 
             <!-- https://aframe.io/docs/1.1.0/core/asset-management-system.html#preloading-audio-and-video -->
             <audio id="song" src="./assets/audio/Star_Wars_original_opening_crawl_1977.mp3" preload="auto"></audio>
             <img id="stars" src="./assets/images/skyboxes/cubemap.png" alt="Cubemap from wwwtyro.net" preload>
             <img id="logo" src="./assets/images/svgs/logo.svg" alt="Logo of Star Wars" preload>
             <img id="deathstar" src="./assets/images/deathstar.png" alt="Deathstar" preload>
+            <img id="deathstarskybox" src="./assets/images/skyboxes/deathstar.png" alt="" preload>
+
+            <a-asset-item id="ship1" src="./assets/models/ships/star_wars_tie_advanced/scene.gltf"></a-asset-item>
+            <a-asset-item id="ship2" src="./assets/models/ships/star_wars_tie_interceptor/scene.gltf"></a-asset-item>
+            <a-asset-item id="ship3" src="./assets/models/ships/star_wars_tie_defender/scene.gltf"></a-asset-item>
+
+            <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf"></a-asset-item>
+            <a-asset-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf"></a-asset-item>
+
+            <a-mixin id="rotate" animation="property: rotation; to: 0 0 360; dur: 35000; loop: true;"></a-mixin>
         </a-assets>
 
         <!-- https://www.youtube.com/watch?v=Nfsx9V8tIYE -->
         <a-sky src="#stars"></a-sky>
 
         <a-sound src="#song" autoplay="true"></a-sound>
+
+        <a-entity position="-3 -5 20"
+            rotation="-30 180 0"
+            animation="property: position; to: -25 30 -55; dur: 20000;"
+            animation__hide="property: visible; to: false; delay: 29000;"
+            >
+            <a-entity gltf-model="#ship1" mixin="rotate"></a-entity>
+            <a-entity gltf-model="#ship1" position="-5 0 2" mixin="rotate"></a-entity>
+            <a-entity gltf-model="#ship1" position="-7 -1 2" mixin="rotate"></a-entity>
+        </a-entity>
+
+        <a-entity
+            animation="property: rotation; to: 0 -2500 0; dur: 120000; dir: alternate">
+            <a-entity gltf-model="#ship2" position="20 -10 -15"></a-entity>
+            <a-entity gltf-model="#ship2" position="18 -9 -10"></a-entity>
+        </a-entity>
+
+        <a-entity
+            animation="property: position; to: 15 5 80; dur: 30000; ">
+            <a-entity gltf-model="#ship3" position="15 -5 -70"></a-entity>
+            <a-entity gltf-model="#ship3" position="-15 -5 -70"></a-entity>
+        </a-entity>
 
         <a-entity 
             text="value: A long time ago, in a galaxy far,\n far away...;
@@ -113,20 +140,19 @@
             title="Death Star" 
             link="borderColor: #ffca48; backgroundColor: #000000; titleColor: #ffca48; titleColor: #ffca48; peekMode: on;" 
             side="double"
-            image="#hangarskybox" position="0 1.6 0" scale="0 0 0"
-            animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 85001;" class="clickable"></a-link>
+            image="#deathstarskybox" position="0 1.6 200" scale="0 0 0"
+            animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 85001;" class="clickable"
+            animation__position="property: position; to: 0 1.6 0; delay: 84000;"></a-link>
 
+
+        <a-entity light="type: ambient; intensity: 3.5;" ></a-entity>
         <a-entity 
             camera
-            wasd-controls="enabled: false;"
             look-controls 
             position="0 1.6 3"
             visible="true"
-            laser-controls
-            raycaster="far: 30; interval: 1000; objects: .clickable"
-            animation="property: wasd-controls.enabled; to: true; delay: 87000;"
         >
-            <a-entity cursor raycaster="far: 1.5; interval: 1000; objects: .clickable"></a-entity>
+            <a-entity cursor raycaster="far: 30; interval: 1000; objects: .clickable"></a-entity>
         </a-entity>
 
     </a-scene>
