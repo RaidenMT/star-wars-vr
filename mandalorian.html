@@ -15,14 +15,13 @@
     gltf-model="dracoDecoderPath: ./assets/draco/;">
 
         <a-assets timeout="15000">
-            <img id="sky" src="./assets/images/skyboxes/cubemap2.png" alt="" preload="true">
+            <img id="sky" src="./assets/images/skyboxes/cubemap2.png" alt="" preload>
             <img id="final" src="./assets/images/skyboxes/final.png" alt="">
-            <video id="video" src="./assets/videos/grogu happy birthday.mp4" preload="true" autoplay></video>
+            <video id="video" src="./assets/videos/grogu happy birthday.mp4" preload></video>
 
             <a-asset-item id="razorcrest" src="./assets/models/ships/razor-crest/scene.gltf"></a-asset-item>
-            <!-- <a-asset-item id="tatooine" src="./assets/models/tatooine/tatooine.glb" preload></a-asset-item> -->
-            <a-assets-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf" preload="true"></a-assets-item>
-            <a-assets-item id="grogu" src="./assets/models/grogu/scene.gltf" preload="true"></a-assets-item>
+            <a-assets-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf" preload></a-assets-item>
+            <a-assets-item id="grogu" src="./assets/models/grogu/scene.gltf" preload></a-assets-item>
         </a-assets>
 
         <a-video
@@ -31,10 +30,6 @@
             height="9"
             position="0 6 -12">
         </a-video>
-
-        <!-- <a-entity
-            gltf-model="#tatooine"
-            ></a-entity> -->
 
         <a-entity
             gltf-model="#mandalorian"
@@ -89,6 +84,9 @@
         </a-entity>
 
     </a-scene>
+
+
+    <script src="./assets/js/mandalorian.js"></script>
     
 </body>
 </html>
