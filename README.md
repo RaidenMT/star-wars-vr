@@ -52,3 +52,9 @@ https://sketchfab.com/3d-models/darth-vader-jedi-fallen-order-2cd28d328dc64fbc86
 Grogu
 https://sketchfab.com/3d-models/baby-yoda-f7cb443df7e348c38aca60eec4fe9509
 
+
+Fonts
+https://msdf-bmfont.donmccurdy.com/
+https://www.dafont.com/star-jedi.font
+https://www.dafont.com/mandalorian.font
+

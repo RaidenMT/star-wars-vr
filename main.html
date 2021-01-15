@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roy's birthday - Main Menu</title>
+
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+    <!-- <script src="./assets/js/main-components.js"></script> -->
+</head>
+
+<body>
+
+    <a-scene>
+        <a-assets>
+            <img id="sky" src="./assets/images/skyboxes/cubemap2.png" alt="" preload>
+            <img id="hangarskybox" src="./assets/images/skyboxes/hangar.png" alt="" preload>
+
+            <a-mixin id="link" link="borderColor: #ffca48; backgroundColor: #000000; titleColor: #ffca48; title: .; titleColor: #000000; peekMode: on;" side="double"></a-mixin>
+            <a-mixin id="text" text="color: #ffca48; align: center; negate: true; side: double; width: 10;"></a-mixin>
+        </a-assets>
+
+        <a-text 
+            value="INTRO"
+            mixin="text"
+            position="0 3.5 -15"></a-text>
+        <a-link
+            vrlink
+            href="./index.html"
+            mixin="link"
+            title="Intro"
+            image="#hangarskybox"
+            class="clickable"
+            position="0 1.6 -15"></a-link>
+
+        <a-text 
+            value="DEATH STAR"
+            mixin="text"
+            position="18 3.5 3"
+            rotation="0 -90 0"></a-text>
+        <a-link
+            href="./deathstar.html"
+            mixin="link"
+            title="Death Star"
+            image="#hangarskybox"
+            position="18 1.6 3"
+            class="clickable"
+            rotation="0 90 0"></a-link>
+
+        <a-text 
+            value="MANDALORIAN"
+            mixin="text"
+            position="-18 3.5 3"
+            rotation="0 90 0"></a-text>
+        <a-link
+            href="./mandalorian.html"
+            title="Mandalorian"
+            mixin="link"
+            image="#hangarskybox"
+            position="-18 1.6 3"
+            class="clickable"
+            rotation="0 -90 0"></a-link>
+
+        <a-text 
+            value="FINAL"
+            mixin="text"
+            position="0 3.5 21"
+            rotation="0 180 0"></a-text>
+        <a-link
+            href="./final.html"
+            title="Final"
+            mixin="link"
+            image="#hangarskybox"
+            class="clickable"
+            position="0 1.6 21"></a-link>
+
+        <a-sky src="#sky"></a-sky>
+
+
+
+        <a-entity
+            camera
+            look-controls
+            wasd-controls
+            position="0 1.6 3">
+            <a-entity cursor raycaster="far: 15; interval: 1000; objects: .clickable"></a-entity>
+        </a-entity>
+
+        
+    </a-scene>
+
+</body>
+
+</html>

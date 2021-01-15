@@ -108,8 +108,13 @@
             ></a-image>
         </a-entity>
 
-        <a-link href="./deathstar.html" title="Death Star" backgroundColor="#000000" image="#hangarskybox" borderColor="#000000" position="0 1.6 0" scale="0 0 0"
-            animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 85001;"></a-link>
+        <a-link
+            href="./deathstar.html"
+            title="Death Star" 
+            link="borderColor: #ffca48; backgroundColor: #000000; titleColor: #ffca48; titleColor: #ffca48; peekMode: on;" 
+            side="double"
+            image="#hangarskybox" position="0 1.6 0" scale="0 0 0"
+            animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 85001;" class="clickable"></a-link>
 
         <a-entity 
             camera
@@ -120,28 +125,9 @@
             laser-controls
             raycaster="far: 30; interval: 1000; objects: .clickable"
             animation="property: wasd-controls.enabled; to: true; delay: 87000;"
-        ></a-entity>
-
-        <!-- <a-entity 
-            camera="active: false;"    
-            look-controls 
-            position="0 1.6 3"
-            wasd-controls 
-            visible="false"
-            animation="property: camera.active; to: true; delay: 87000;"
-            animation__show="property: visible; to: true; delay: 87000;"
-            >
-            <a-entity
-                laser-controls
-                cursor="fuse: true; fuseTimeout: 1500;"
-                position="0 0 -1"
-                geometry="primitive: ring; radiusInner: 0.1; radiusOuter: 0.15" 
-                material="color: white; shader: flat"
-                visible="false"
-                animation="property: visible; to: true; delay: 90000;">
-            </a-entity>
-            
-        </a-entity> -->
+        >
+            <a-entity cursor raycaster="far: 1.5; interval: 1000; objects: .clickable"></a-entity>
+        </a-entity>
 
     </a-scene>
 

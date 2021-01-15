@@ -42,6 +42,14 @@
             scale="0.02 0.02 0.02"
             rotation="0 45 0"></a-entity>
 
+        <a-link href="./final.html" 
+            title="Happy Birthday Roy!" image="#hangarskybox" position="0 1.6 -3" class="clickable"
+            link="borderColor: #ffca48; backgroundColor: #000000; titleColor: #ffca48; titleColor: #ffca48; peekMode: on;" side="double"
+            
+            ></a-link>
+            <!-- scale="0 0 0" -->
+            <!-- animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 5000;" -->
+
         <a-sky src="#sky" ></a-sky>
 
         <a-entity
@@ -60,7 +68,7 @@
             camera
             look-controls
             position="0 1.6 3">
-
+            <a-entity cursor raycaster="far: 50; interval: 1000; objects: .clickable"></a-entity>
         </a-entity>
 
     </a-scene>

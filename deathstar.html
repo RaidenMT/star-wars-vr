@@ -22,7 +22,6 @@
             <img id="hangarskybox" src="./assets/images/skyboxes/hangar.png" preload>
 
             <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf" preload></a-asset-item>
-            <!-- <a-asset-item id="hangar" src="./assets/models/hangar/scene.gltf" preload></a-asset-item> -->
 
             <video id="darthvader" loop="false" src="./assets/videos/darth vader happry birthday.mp4" preload></video>
 
@@ -97,19 +96,18 @@
             mixin="scale dance"
         ></a-entity>
 
-        <!-- <a-link href="./index.html" title="Death Star" image="#sky2" position="0 1.6 0"></a-link> -->
-
+        <a-link href="./mandalorian.html" 
+            title="Mandalorian" image="#hangarskybox" position="0 1.6 8"  class="clickable"
+            link="borderColor: #ffca48; backgroundColor: #000000; titleColor: #ffca48; titleColor: #ffca48;" side="double"
+            
+            ></a-link>
+            <!-- scale="0 0 0" -->
+            <!-- animation__scale="property: scale; from: 0 0 0; to: 1 1 1: dur: 2000; delay: 5000;" -->
         <a-entity 
             camera
             look-controls 
-            position="0 1.6 3" >
-            <!-- <a-cursor
-                geometry="primitive:  ring;  radiusOuter:  0.016;  radiusInner:  0.01"
-                material="color: #ff9; shader: flat; transparent: true; opacity: 0.5; repeat: 1 1;"
-                raycaster="direction: 0 0 -1;  origin: 0 0 0"
-                ></a-cursor> -->
-
-                
+            position="0 1.6 3">
+            <a-entity cursor raycaster="far: 50; interval: 1000; objects: .clickable"></a-entity>
         </a-entity>
 
     </a-scene>
