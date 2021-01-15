@@ -21,18 +21,18 @@
                 alt="HDRI de https://hdrihaven.com/hdri/?h=satara_night">
 
             <!-- https://aframe.io/docs/1.1.0/core/asset-management-system.html#preloading-audio-and-video -->
-            <audio id="song" src="./assets/audio/Star_Wars_original_opening_crawl_1977.mp3" preload="auto"></audio>
+            <audio id="song" src="./assets/audio/Star_Wars_original_opening_crawl_1977.mp3" preload></audio>
             <img id="stars" src="./assets/images/skyboxes/cubemap.png" alt="Cubemap from wwwtyro.net" preload>
             <img id="logo" src="./assets/images/svgs/logo.svg" alt="Logo of Star Wars" preload>
             <img id="deathstar" src="./assets/images/deathstar.png" alt="Deathstar" preload>
             <img id="deathstarskybox" src="./assets/images/skyboxes/deathstar.png" alt="" preload>
 
-            <a-asset-item id="ship1" src="./assets/models/ships/star_wars_tie_advanced/scene.gltf"></a-asset-item>
-            <a-asset-item id="ship2" src="./assets/models/ships/star_wars_tie_interceptor/scene.gltf"></a-asset-item>
-            <a-asset-item id="ship3" src="./assets/models/ships/star_wars_tie_defender/scene.gltf"></a-asset-item>
+            <a-asset-item id="ship1" src="./assets/models/ships/star_wars_tie_advanced/scene.gltf" preload></a-asset-item>
+            <a-asset-item id="ship2" src="./assets/models/ships/star_wars_tie_interceptor/scene.gltf" preload></a-asset-item>
+            <a-asset-item id="ship3" src="./assets/models/ships/star_wars_tie_defender/scene.gltf" preload></a-asset-item>
 
-            <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf"></a-asset-item>
-            <a-asset-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf"></a-asset-item>
+            <a-asset-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf" preload></a-asset-item>
+            <a-asset-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf" preload></a-asset-item>
 
             <a-mixin id="rotate" animation="property: rotation; to: 0 0 360; dur: 35000; loop: true;"></a-mixin>
         </a-assets>
