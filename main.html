@@ -16,12 +16,19 @@
 
     <a-scene>
         <a-assets>
+            <audio id="song" src="./assets/audio/The Mandalorian Main Theme (Gingertail Cover).mp3" preload></audio>
+            
             <img id="sky" src="./assets/images/skyboxes/cubemap2.png" alt="" preload>
-            <img id="hangarskybox" src="./assets/images/skyboxes/hangar.png" alt="" preload>
+            <img id="intro" src="./assets/images/skyboxes/intro.png" alt="" preload>
+            <img id="deathstar" src="./assets/images/skyboxes/deathstar.png" alt="" preload>
+            <img id="mandalorian" src="./assets/images/skyboxes/mandalorian.png" alt="" preload>
+            <img id="final" src="./assets/images/skyboxes/final.png" alt="" preload>
 
             <a-mixin id="link" link="borderColor: #ffca48; backgroundColor: #000000; titleColor: #ffca48; title: .; titleColor: #000000; peekMode: on;" side="double"></a-mixin>
             <a-mixin id="text" text="color: #ffca48; align: center; negate: true; side: double; width: 10;"></a-mixin>
         </a-assets>
+
+        <a-sound src="#song" sound="autoplay: true; loop: true; volume: 0.1"></a-sound>
 
         <a-text 
             value="INTRO"
@@ -32,7 +39,7 @@
             href="./index.html"
             mixin="link"
             title="Intro"
-            image="#hangarskybox"
+            image="#intro"
             class="clickable"
             position="0 1.6 -15"></a-link>
 
@@ -45,7 +52,7 @@
             href="./deathstar.html"
             mixin="link"
             title="Death Star"
-            image="#hangarskybox"
+            image="#deathstar"
             position="18 1.6 3"
             class="clickable"
             rotation="0 90 0"></a-link>
@@ -59,7 +66,7 @@
             href="./mandalorian.html"
             title="Mandalorian"
             mixin="link"
-            image="#hangarskybox"
+            image="#mandalorian"
             position="-18 1.6 3"
             class="clickable"
             rotation="0 -90 0"></a-link>
@@ -73,7 +80,7 @@
             href="./final.html"
             title="Final"
             mixin="link"
-            image="#hangarskybox"
+            image="#final"
             class="clickable"
             position="0 1.6 21"></a-link>
 
@@ -86,7 +93,7 @@
             look-controls
             wasd-controls
             position="0 1.6 3">
-            <a-entity cursor raycaster="far: 15; interval: 1000; objects: .clickable"></a-entity>
+            <a-entity cursor raycaster="far: 5; interval: 1000; objects: .clickable"></a-entity>
         </a-entity>
 
         
