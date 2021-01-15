@@ -29,6 +29,8 @@ https://online-video-cutter.com/es/
 
 https://easings.net/
 
+https://www.youtube.com/watch?v=63TQKWokqeU
+
 
 3D
 Stormtrooper
@@ -41,10 +43,12 @@ Stormtrooper
 Mandalorian
 "Mandalorian - Star Wars" by GRIP420 is licensed under Creative Commons Attribution. https://skfb.ly/6o8Zn To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
 
+R2D2
+https://sketchfab.com/3d-models/r2-d2-astrodroid-reload-7c69e7ff13f447c99a389f8e424675dd
 
 Darth Vader
 https://sketchfab.com/3d-models/darth-vader-jedi-fallen-order-2cd28d328dc64fbc86be9b9d2c45a7ff
 
-Baby Yoda
+Grogu
 https://sketchfab.com/3d-models/baby-yoda-f7cb443df7e348c38aca60eec4fe9509
 

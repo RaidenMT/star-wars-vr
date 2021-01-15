@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roy's birthday - Main Menu</title>
+
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene>
+
+        <a-assets timeout="5000">
+            <img id="sky" src="./assets/images/skyboxes/cubemap2.png" alt="" preload>
+            <audio id="song" src="./assets/audio/The Mandalorian Main Theme (Gingertail Cover).mp3" preload></audio>
+
+            <a-assets-item id="mandalorian" src="./assets/models/mandalorian/scene.gltf" preload></a-assets-item>
+            <a-assets-item id="grogu" src="./assets/models/grogu/scene.gltf" preload></a-assets-item>
+            <a-assets-item id="stormtrooper" src="./assets/models/stormtrooper/scene.gltf" preload></a-assets-item>
+            <a-assets-item id="r2d2" src="./assets/models/r2d2/scene.gltf" preload></a-assets-item>
+            <a-assets-item id="darthvader" src="./assets/models/darth_vader/scene.gltf" preload></a-assets-item>
+            
+            <a-mixin id="scale" scale="0.01 0.01 0.01"></a-mixin>
+        </a-assets>
+
+        <a-sound src="#song" sound="autoplay: false; loop: true; volume: 0.1"></a-sound>
+
+        <a-entity 
+            gltf-model="#mandalorian" 
+            animation-mixer 
+            position="0 1 1" ></a-entity>
+
+        <a-entity 
+            gltf-model="#grogu" 
+            animation-mixer 
+            position="-1 0.7 0.5"
+            scale="0.02 0.02 0.02"></a-entity>
+
+        <a-entity 
+            gltf-model="#r2d2" 
+            animation-mixer 
+            position="1 1 0.3"
+            scale="0.0007 0.0007 0.0007"
+            rotation="0 -30 0"></a-entity>
+
+        <a-entity 
+            gltf-model="#stormtrooper" 
+            animation-mixer 
+            position="-3 0.7 0" 
+            mixin="scale"
+            rotation="0 45 0"></a-entity>
+
+        <a-entity 
+            gltf-model="#stormtrooper" 
+            animation-mixer 
+            position="3 0.7 0"
+            mixin="scale"
+            rotation="0 -45 0"></a-entity>
+
+
+        <a-sky src="#sky"></a-sky>
+
+        <a-entity light="type: ambient; color: #ffffff; intensity: 1.5;"></a-entity>
+        <a-entity 
+            light="intensity: 6;"
+            position="0 1.5 1.15"></a-entity>
+        <!-- <a-entity light="type: ambient; color: #ffffff; intensity: 1.5;"></a-entity> -->
+        
+
+        <a-entity 
+            camera
+            look-controls
+            position="0 1.6 3"></a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>
